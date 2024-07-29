@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>IT Works - Ticket Manager - Ticket Details</title>
+    <style>
+        .dropdown-toggle img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column bg-secondary-subtle vh-100">
+
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <div class="col-12 col-md-3 col-lg-3 col-xl-2 px-0 bg-dark flex-grow-1">
+                <div class="d-flex flex-column align-items-start px-3 pt-3 pb-3 text-white h-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 text-white text-decoration-none">
+                        <span class="fs-5">IT Works Ticket Manager</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column gap-3 mb-sm-auto mb-0 w-100">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link align-middle px-2">
+                                <i class="fs-4 bi bi-speedometer2"></i> <span class="ms-1 d-sm-inline">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/reports" class="nav-link align-middle px-2">
+                                <i class="fs-4 bi bi-newspaper"></i> <span class="ms-1 d-sm-inline">Reports</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="d-flex flex-column align-items-end dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle gap-2" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://via.placeholder.com/30" alt="User Image" class="rounded-circle" />
+                            <span class="d-none d-sm-inline mx-1">User Name</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-md-9 col-lg-9 col-xl-10 h-100 overflow-scroll">
+                <div class="row bg-white border-bottom p-4">
+                    <div class="input-group">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search Tickets..." aria-label="Search Tickets" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                    </div>                  
+                </div>
+
+                <div class="d-flex flex-column flex-grow-1 h-100">
+                    <div class="row mt-2 g-2">
+                        <div class="col">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Ticket Details</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="row g-2"> 
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Ticket Title</strong>
+                                </div>
+                                <div class="card-body">
+                                    Ticket description goes here.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2 mb-2 g-2">
+                        <div class="col-12 col-md-7 pb-2">
+                            <div class="card" style="height: 100%; max-height: 70vh;">
+                                <div class="card-header">
+                                    <p class="m-0">Comments</p>
+                                </div>
+                                <div class="card-body overflow-scroll">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="row p-2">
+                                                <div class="col-auto">
+                                                    <i class="bi bi-person-circle fs-1"></i>
+                                                </div>
+                                                <div class="col">
+                                                    <small class="m-0 p-0">Comment Date</small>
+                                                    <p class="m-0 p-0"><strong>Comment Author</strong></p>
+                                                    <p class="m-0 p-0">Comment text goes here.</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>                                      
+                                </div>
+                                <div class="card-footer">
+                                    <form role="comment" action="#" method="POST">
+                                        <div class="row">
+                                            <div class="col">
+                                                <textarea class="form-control" rows="3" placeholder="Add a comment"></textarea>
+                                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-5">
+                            <div class="card">
+                                <div class="card-header">
+                                    <p class="m-0">Ticket Details</p>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                          <tr>
+                                            <th>Status</th>
+                                            <td><span class="badge bg-success">Open</span></td>
+                                          </tr>
+                                          <tr>
+                                            <th>Created By</th>
+                                            <td>Author Name</td>
+                                          </tr>
+                                          <tr>
+                                            <th>Priority</th>
+                                            <td><span class="badge bg-primary">High</span></td>
+                                          </tr>
+                                          <tr>
+                                            <th>Date Created</th>
+                                            <td>Creation Date</td>
+                                          </tr>
+                                          <tr>
+                                            <th>Date Updated</th>
+                                            <td>Update Date</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-primary">Update Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="row bg-dark text-white p-3 mt-auto text-center border-top">
+                    <p class="m-0 p-0">&copy; 2024</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz3UENF1hzeQc2E9Wi0eOfu2z9IepB5YhGtykA5i4B6s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-QY6pD9ZJ1IpeWoHLx+yMIIrGHNR+ncI/pgoff5mF02OuQxBoW59f6LAf0WnR2r6l" crossorigin="anonymous"></script>
+</body>
+</html>
