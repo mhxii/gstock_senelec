@@ -32,6 +32,8 @@ function updateMainContent(titleText) {
 
     // Insérer le contenu en fonction du bouton cliqué
     switch (titleText) {
+
+//Dashboard		
         case 'Dashboard':
             mainContent.innerHTML = `<ul class="box-info">
 					<li>
@@ -149,19 +151,27 @@ function updateMainContent(titleText) {
 					</div>
 				</div>`;
             break;
+
+// Consulter e-ticket			
         case 'My Store':
             mainContent.innerHTML = `<p>Voici les informations concernant votre magasin.</p>`;
             break;
+//
         case 'Analytics':
             mainContent.innerHTML = `<p>Accédez aux analyses de vos données.</p>`;
             break;
+	//Message
         case 'Message':
             mainContent.innerHTML = `<p>Vérifiez vos messages ici.</p>`;
             break;
+
+	//team		
         case 'Team':
             mainContent.innerHTML = `<p>Gérez votre équipe ici.</p>`;
             break;
-        default:
+        
+	//default	
+			default:
             mainContent.innerHTML = `<ul class="box-info">
 					<li>
 						<i class='bx bxs-calendar-check' ></i>
