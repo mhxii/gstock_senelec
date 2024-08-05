@@ -1,3 +1,5 @@
+import { setupTicketValidation } from './function-js/setupTicketValidation.js';
+
 // Sélectionner les éléments nécessaires
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 const mainTitle = document.querySelector('.head-title .left h1');
@@ -160,16 +162,33 @@ function updateMainContent(titleText) {
                     </div>
                 </div>`;
             break;
-        case 'My Store':
-            mainContent.innerHTML = `<p>Voici les informations concernant votre magasin.</p>`;
+        case 'Valider E-ticket':
+            mainContent.innerHTML = `
+                <form id="search-form">
+                    <div class="form-group">
+                        <label for="ticket-code">Entrez le code du e-ticket :</label>
+                        <input type="text" id="ticket-code" class="form-control" placeholder="Code e-ticket">
+                        <button type="submit" class="btn btn-primary">Rechercher</button>
+                    </div>
+                </form>
+
+                <div id="ticket-info" class="mt-4"></div>
+
+                <button id="validate-button" class="btn btn-success mt-4" style="display: none;">Valider E-ticket</button>`;
+
+
+				// Ajouter la logique JavaScript pour la recherche et la validation des tickets
+				console.log("Setup Ticket Validation Function Called");
+				setupTicketValidation();
+
             break;
-        case 'Analytics':
+        case 'Consulter E-ticket':
             mainContent.innerHTML = `<p>Accédez aux analyses de vos données.</p>`;
             break;
-        case 'Message':
+        case 'Consulter Stock':
             mainContent.innerHTML = `<p>Vérifiez vos messages ici.</p>`;
             break;
-        case 'Team':
+        case 'Alerter Niveau de Stock':
             mainContent.innerHTML = `<p>Gérez votre équipe ici.</p>`;
             break;
         default:
