@@ -13,9 +13,8 @@ export function setupTicketValidation() {
 
         // Simuler la recherche de ticket avec un exemple de données
         const ticketData = {
-            code: ticketCode,
-            owner: 'John Doe',
-            event: 'Concert de musique',
+            code: 15,
+            owner: 'Babacar',
             date: '15 Août 2024',
             status: 'Non validé'
         };
@@ -25,7 +24,6 @@ export function setupTicketValidation() {
             <h3>Informations du E-ticket</h3>
             <p>Code: ${ticketData.code}</p>
             <p>Détenteur: ${ticketData.owner}</p>
-            <p>Événement: ${ticketData.event}</p>
             <p>Date: ${ticketData.date}</p>
             <p>Status: ${ticketData.status}</p>
         `;
